@@ -1,10 +1,15 @@
 <div class="contents row">
-  <% @tweets.each do |tweet| %>
-   <%#div class="content_post" style="background-image: url(<%= tweet.image %>
-      <p><%= tweet.text %></p>
+  <% @tweets.each do |t| %>
+      <div class="content_post" >
       <span class="name">
-        <%= tweet.name %>
+       <%= t.name %>
       </span>
-    <%#/div %>
+      <p><%= t.text %></p>
+     <div class="audio">
+     <audio src= "<%= "#{t.file}" %>" controls="">
+         <a src="<%= "#{t.file}" %>">ダウンロード</a>
+     </audio>
+     </div>
+    </div >
   <% end %>
 </div>
