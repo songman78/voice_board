@@ -1,15 +1,6 @@
 <div class="contents row">
-  <% @tweets.each do |t| %>
-      <div class="content_post" >
-      <span class="name">
-       <%= t.name %>
-      </span>
-      <p><%= t.text %></p>
-     <div class="audio">
-     <audio src= "<%= "#{t.file}" %>" controls="">
-         <a src="<%= "#{t.file}" %>">ダウンロード</a>
-     </audio>
-     </div>
-    </div >
+<p>曲当て掲示板は、思い出せないあの曲を、音声、テキストによって共有するサイトです。</p>
+  <% @tweets.each do |tweet| %>
+        <%= render partial: "tweet", locals: { tweet: tweet} %>
   <% end %>
 </div>
