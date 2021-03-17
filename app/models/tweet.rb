@@ -3,4 +3,5 @@ class Tweet < ApplicationRecord
   mount_uploader :file, AudiofileUploader
 
   belongs_to :user
+  has_many :comments
 end
