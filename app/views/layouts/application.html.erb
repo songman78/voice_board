@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>VoiceBoard</title>
+    <title>曲当て掲示板</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,7 +11,6 @@
   <body>
      <header class="header">
         <h1 class="grid-6"><a href="/">曲当て掲示板</a></h1>
-        <div class="users">
          <% if user_signed_in? %>
             <ul class="user__info">
               <li>
@@ -34,7 +33,6 @@
             </li>
           </ul>
         <% end %>
-      </div>
     </header>
     <%= yield %>
      <footer>
