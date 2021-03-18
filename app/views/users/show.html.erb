@@ -2,6 +2,7 @@
   <p><%= @name %>さんの投稿一覧</p>
   <% @tweets.each do |tweet| %>
    <div class="content_post" >
+     <%= link_to '詳細', tweet_path(tweet.id), method: :get %>
       <p><%= tweet.text %></p>
        <div class="audio">
      <audio src= "<%= "#{tweet.file}" %>" controls="">

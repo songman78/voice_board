@@ -1,18 +1,13 @@
   <div class="content_post" >
        <div class="more">
+        <div class="checked">
+        <p>解決/未解決（機能実装予定）</p>
+        </div>
         <ul class="more_list">
         <li>
             <%= link_to '詳細', tweet_path(tweet.id), method: :get %>
+           <%# 詳細に飛ぶ際content_postをクリックしたら詳細に飛べるようにする %>
           </li>
-        <% if user_signed_in? && current_user.id == tweet.user_id %>
-
-           <li>
-            <%= link_to '編集', edit_tweet_path(tweet.id), method: :get %>
-          </li>
-          <li>
-            <%= link_to '削除', tweet_path(tweet.id), method: :delete %>
-          </li>
-        <% end %>
         </ul>
       </div>
       <span class="name">
