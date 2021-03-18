@@ -21,4 +21,9 @@
         </a>
       </span>
       <p><%= tweet.text %></p>
+        <div class="audio">
+     <audio src= "<%= "#{tweet.file}" %>" controls="">
+         <a src="<%= "#{tweet.file}" %>">ダウンロード</a>
+     </audio>
+     </div>
     </div >
