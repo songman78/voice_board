@@ -1,15 +1,12 @@
   <div class="content_post" >
-       <div class="more">
-        <div class="checked">
-        <p>解決/未解決（機能実装予定）</p>
-        </div>
-        <ul class="more_list">
-        <li>
-            <%= link_to '詳細', tweet_path(tweet.id), method: :get %>
-           <%# 詳細に飛ぶ際content_postをクリックしたら詳細に飛べるようにする %>
+    <div class="more">
+      <ul class="more_list"
+         <li>
+        <%= link_to '詳細', tweet_path(tweet.id), method: :get %>
+              <%# 詳細に飛ぶ際content_postをクリックしたら詳細に飛べるようにする %>
           </li>
         </ul>
-      </div>
+     </div>
       <span class="name">
       <a href= "/users/<%= (tweet.user.id) %>">
           <span>投稿者</span><%= tweet.user.name %>
