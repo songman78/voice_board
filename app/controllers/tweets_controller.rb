@@ -2,8 +2,11 @@ class TweetsController < ApplicationController
   before_action :set_tweet,only: [:edit, :show]
 
   def index
-    @tweets = Tweet.includes(:user).order("created_at DESC")
-    # @unsolved_tweet = 
+    @tweets = Tweet.includes(:user).order("created_at DESC").first(5)
+    
+    # @unsolved_tweet = Tweet.where(check_id:1)
+    # @solution_tweet = Tweet.where(check_id:2)
+    
   end
 
   def new
@@ -11,7 +14,12 @@ class TweetsController < ApplicationController
   end
 
   def create
-    Tweet.create(tweet_params)
+    @tweet = Tweet.new(tweet_params)
+    if  @tweet.save
+      render :create
+    else
+     render :new
+    end
   end
 
   def destroy
@@ -34,7 +42,7 @@ class TweetsController < ApplicationController
 
   private
   def tweet_params
-    params.require(:tweet).permit(:name,:file, :text).merge(user_id:current_user.id)
+    params.require(:tweet).permit(:name,:file, :text, :check_id).merge(user_id:current_user.id)
   end
 
   def set_tweet
