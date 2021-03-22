@@ -1,32 +1,41 @@
-// window.addEventListener('load', function(){
 
-//   const pullDownButton = document.getElementById("lists")
-//   const pullDownParents = document.getElementById("pull-down")
-//   const pullDownChild = document.querySelectorAll(".pull-down-list")
-//   const currentList = document.getElementById("current-list")
+  window.addEventListener('load', function(){
+    
+    const solution = document.getElementById("list-solution")
+    const unsolved = document.getElementById("list-unsolved")
+    const list= document.querySelectorAll(".list")
+    const currentList = document.getElementById("current-list")
+    
+    solution.addEventListener('mouseover', function(){
+      console.log("over")
+      this.setAttribute("style", "background-color:#FFBEDA;")
+    })
+    solution.addEventListener('mouseout', function(){
+      console.log("remove")
+      this.removeAttribute("style", "background-color:#FFBEDA;")
+    })
+
+    unsolved.addEventListener('mouseover', function(){
+      console.log("over")
+      this.setAttribute("style", "background-color:#FFBEDA;")
+    })
+    unsolved.addEventListener('mouseout', function(){
+      console.log("remove")
+      this.removeAttribute("style", "background-color:#FFBEDA;")
+    })
+
+    // コースの値を取得し表示する
+    list.forEach(function(list) {
+      list.addEventListener('click', function() {
+        value = list.innerHTML
+        console.log(list.id)
+      if (list.id == "list-solution") {
+        currentList.innerHTML = "解決済"
+      } else {
+        currentList.innerHTML = "未解決"
+      }
+      })
+    })
+  })
 
 
-//   pullDownButton.addEventListener('mouseover', function(){
-//     this.setAttribute("style", "background-color:#FFBEDA;")
-//   })
-//   pullDownButton.addEventListener('mouseout', function(){
-//     this.removeAttribute("style", "background-color:#FFBEDA;")
-//   })
-//   pullDownButton.addEventListener('click', function() {
-//     if (pullDownParents.getAttribute("style") == "display:block;") {
-//       // pullDownParentsにdisplay:block;が付与されている場合（つまり表示されている時）実行される
-//       pullDownParents.removeAttribute("style", "display:block;")
-//     } else {
-//       // pullDownParentsにdisplay:block;が付与されていない場合（つまり非表示の時）実行される
-//       pullDownParents.setAttribute("style", "display:block;")
-//     }
-//   })
-
-//     // コースの値を取得し表示する
-//     pullDownChild.forEach(function(list) {
-//       list.addEventListener('click', function() {
-//         value = list.innerHTML
-//         currentList.innerHTML = value
-//       })
-//     })
-// })

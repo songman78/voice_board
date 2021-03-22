@@ -1,5 +1,6 @@
 <div class="contents row">
   <div class="content_post" >
+         <span id="current-list">選択されていません</span>
    <% if user_signed_in? && current_user.id == @tweet.user_id %>
         <ul class="more_list">
            <li>
@@ -16,6 +17,14 @@
          <a src="<%= "#{@tweet.file}" %>">ダウンロード</a>
      </audio>
      </div>
+     <div class="navbar">
+    <ul class="nav-lists" id="pull-down">
+      <li class="list-status">
+      この問題は解決しましたか？
+      <li class="list" id="list-solution">はい</li>
+      <li class="list" id="list-unsolved">いいえ</li>
+    </ul>
+  </div>
     </div >
       <div class="container">
     <% if user_signed_in? %>
@@ -28,7 +37,7 @@
     <% end %>
       <div class="comments" id="comments">
       <h4>＜コメント一覧＞</h4>
-      <% @comments.each do |comment| %>
+      <% @comments.reverse_each do |comment| %>
         <p>
           <strong><%= link_to comment.user.name, "/users/#{comment.user_id}" %>：</strong>
           <%= comment.text %>
