@@ -1,6 +1,30 @@
 <div class="contents row">
   <div class="container">
     <h3>編集する</h3>
-     <%= render partial: "form", locals: { tweet: @tweet } %>
+        
+    <%= form_with(model: @tweet, local: true) do |form| %>
+       <div class="wrapper">
+
+      <section class="main-controls">
+        <canvas class="visualizer" height="60px"></canvas>
+        <div id="buttons">
+          <button class="record">Record</button>
+          <button class="stop">Stop</button>
+        </div>
+      </section>
+
+      <section class="sound-clips">
+
+
+      </section>
+
+    </div>
+<%= javascript_pack_tag 'app.js' %>
+      <%#= form.label :file %>
+      <%= form.file_field :file , :size => 140 %>
+      <%= form.text_area :text, placeholder: "ジャンル・時代・場所など", rows: "10" %>
+      <%= form.submit "更新する" %>
+       <%= form.collection_select(:check_id, Check.all, :id, :name, {}, {class:"check"}) %>
+    <% end %>
   </div>
 </div>

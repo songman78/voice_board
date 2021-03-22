@@ -1,7 +1,7 @@
 <div class="contents row">
   <div class="content_post" >
-         <span id="current-list">選択されていません</span>
    <% if user_signed_in? && current_user.id == @tweet.user_id %>
+   <p>解決したら解決ボタン押してね</p>
         <ul class="more_list">
            <li>
             <%= link_to '編集', edit_tweet_path(@tweet.id), method: :get %>
@@ -17,14 +17,6 @@
          <a src="<%= "#{@tweet.file}" %>">ダウンロード</a>
      </audio>
      </div>
-     <div class="navbar">
-    <ul class="nav-lists" id="pull-down">
-      <li class="list-status">
-      この問題は解決しましたか？
-      <li class="list" id="list-solution">はい</li>
-      <li class="list" id="list-unsolved">いいえ</li>
-    </ul>
-  </div>
     </div >
       <div class="container">
     <% if user_signed_in? %>

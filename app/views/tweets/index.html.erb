@@ -2,7 +2,28 @@
 <div class="message top">
 <p>思い出せないあの曲を、鼻歌で載せて検索しよう！！</p>
 </div>
+  <div class="new_content" >
+  <p>新着</p>
   <% @tweets.each do |tweet| %>
-        <%= render partial: "tweet", locals: { tweet: tweet} %>
+  <%= render partial: "tweet", locals: { tweet: tweet} %>
   <% end %>
+  </div>
+
+  <div class="unsolved_content">
+  <p>未解決</p>
+    <% @tweets.each do |tweet| %>
+      <% if tweet.check_id == 1 %>
+        <%= render partial: "tweet", locals: { tweet: tweet} %>
+      <%end%>
+    <% end %>
+  </div>
+  <div class="solution_content">
+  <p>解決済</p>
+    <% @tweets.each do |tweet| %>
+    <% if tweet.check_id == 2 %>
+        <%= render partial: "tweet", locals: { tweet: tweet} %>
+     <% end %>
+  <% end %>
+  </div>
 </div>
+ 

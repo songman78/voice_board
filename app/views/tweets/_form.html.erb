@@ -1,5 +1,5 @@
+    
     <%= form_with(model: tweet, local: true) do |form| %>
-
        <div class="wrapper">
 
       <section class="main-controls">
@@ -20,5 +20,6 @@
       <%#= form.label :file %>
       <%= form.file_field :file , :size => 140 %>
       <%= form.text_area :text, placeholder: "ジャンル・時代・場所など", rows: "10" %>
-      <%= form.submit "SEND" %>
+      <%= form.submit "投稿する" %>
+       <%= form.collection_select(:check_id, Check.all, :id, :name, {}, {class:"check"}) %>
     <% end %>
