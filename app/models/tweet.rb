@@ -8,4 +8,7 @@ class Tweet < ApplicationRecord
   end
   belongs_to :user
   has_many :comments
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :check
+
 end
