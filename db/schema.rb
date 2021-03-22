@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2021_03_17_022314) do
     t.string "text"
     t.string "file"
     t.integer "user_id"
+    t.integer "check_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
