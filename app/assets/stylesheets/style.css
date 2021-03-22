@@ -174,7 +174,7 @@ button.delete {
 
 /* Checkbox hack to control information box display */
 
-label {
+/* label {
   font-size: 3rem;
   position: absolute;
   top: 2px;
@@ -183,7 +183,7 @@ label {
   cursor: pointer;
   background-color: black;
   border-radius: 10px;
-}
+} */
 
 input[type=checkbox] {
    position: absolute;
