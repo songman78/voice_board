@@ -44,7 +44,7 @@
 <p>javascript</p>
  
 
-# 環境構築
+<!-- # 環境構築
 $ git clone https://github.com/songman78/voice_board
 $ cd voice_board
 $ bundle install
@@ -52,11 +52,11 @@ $ yarn install
 $ rails db:create
 $ rails db:migrate
 $ rails s
-👉 http://localhost:3000
+👉 http://localhost:3000 -->
 
 # 課題や今後実装したい機能
-カテゴリー分け機能の追加
-・今はまだ考えていませんが、今後投稿数が増えたとしたら、より細かいカテゴリーに分けることでアプリケーションの利便性が上がると思います。
+<h3>カテゴリー分け機能の追加</h3>
+<p>・今はまだ考えていませんが、今後投稿数が増えたとしたら、より細かいカテゴリーに分けることでアプリケーションの利便性が上がると思います。</p>
 
 # DB設計
 
