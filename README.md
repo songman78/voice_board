@@ -1,5 +1,6 @@
 # README
 
+
 # app name
  鼻歌検索
 
@@ -39,6 +40,16 @@ ruby-version 2.6.5
 ruby on rails
 git hub
 javascript
+
+# 環境構築
+$ git clone https://github.com/songman78/voice_board
+$ cd voice_board
+$ bundle install
+$ yarn install
+$ rails db:create
+$ rails db:migrate
+$ rails s
+👉 http://localhost:3000
 
 # 課題や今後実装したい機能
 カテゴリー分け機能の追加
