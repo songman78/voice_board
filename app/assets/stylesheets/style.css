@@ -64,6 +64,7 @@ margin-right: 30px;
   color: #fff;
 }
 
+
 * {
   margin: 0;
   padding: 0;
@@ -115,7 +116,7 @@ canvas {
 
 button {
   font-size: 1rem;
-  background: gray;
+  background: #0088cc;
   text-align: center;
   color: white;
   border: none;
@@ -174,7 +175,7 @@ button.delete {
 
 /* Checkbox hack to control information box display */
 
-/* label {
+label {
   font-size: 3rem;
   position: absolute;
   top: 2px;
@@ -183,7 +184,7 @@ button.delete {
   cursor: pointer;
   background-color: black;
   border-radius: 10px;
-} */
+}
 
 input[type=checkbox] {
    position: absolute;
@@ -231,11 +232,4 @@ input[type=checkbox]:checked ~ aside {
     max-width: 1000px;
     margin: 0 auto;
   }
-}
-
-.hidden{
-  display: none;
-}
-p {
-  margin: 10px 0;
 }

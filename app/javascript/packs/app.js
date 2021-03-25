@@ -1,5 +1,3 @@
-// set up basic variables for app
-
 const record = document.querySelector('.record');
 const stop = document.querySelector('.stop');
 const soundClips = document.querySelector('.sound-clips');
@@ -53,7 +51,7 @@ if (navigator.mediaDevices.getUserMedia) {
     mediaRecorder.onstop = function(e) {
       console.log("data available after MediaRecorder.stop() called.");
 
-      const clipName = prompt('Enter a name for your sound clip?','My unnamed clip');
+      const clipName = prompt('名前を入力してください','音声ファイル');
 
       const clipContainer = document.createElement('article');
       const clipLabel = document.createElement('p');
@@ -66,7 +64,7 @@ if (navigator.mediaDevices.getUserMedia) {
       deleteButton.className = 'delete';
 
       if(clipName === null) {
-        clipLabel.textContent = '音声ファイル';
+        clipLabel.textContent = 'My unnamed clip';
       } else {
         clipLabel.textContent = clipName;
       }
@@ -176,5 +174,3 @@ window.onresize = function() {
 }
 
 window.onresize();
-
-console.log('Hello from My JS')
