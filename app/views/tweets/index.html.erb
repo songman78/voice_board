@@ -3,14 +3,18 @@
 <p>思い出せないあの曲を、鼻歌で載せて検索しよう！！</p>
 </div>
   <div class="new_content" >
-  <p>新着</p>
+  <div class="categry">
+  <p >新着</p>
+  </div>
   <% @tweets.each do |tweet| %>
   <%= render partial: "tweet", locals: { tweet: tweet} %>
   <% end %>
   </div>
 
   <div class="unsolved_content">
+  <div class="categry">
   <p>未解決</p>
+  </div>
     <% @tweets.each do |tweet| %>
       <% if tweet.check_id == 1 %>
         <%= render partial: "tweet", locals: { tweet: tweet} %>
@@ -18,7 +22,9 @@
     <% end %>
   </div>
   <div class="solution_content">
+<div class="categry">
   <p>解決済</p>
+  </div>
     <% @tweets.each do |tweet| %>
     <% if tweet.check_id == 2 %>
         <%= render partial: "tweet", locals: { tweet: tweet} %>
