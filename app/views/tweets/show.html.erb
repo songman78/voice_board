@@ -1,15 +1,19 @@
 <div class="contents row">
   <div class="content_post" >
    <% if user_signed_in? && current_user.id == @tweet.user_id %>
-   <p>解決したら解決ボタン押してね</p>
-        <ul class="more_list">
-           <li>
-            <%= link_to '編集', edit_tweet_path(@tweet.id), method: :get %>
-          </li>
-          <li>
-            <%= link_to '削除', tweet_path(@tweet.id), method: :delete %>
-          </li>
-        </ul>
+  <div class="show_list">
+    <div class="show_text">
+    <p>※解決したら解決ボタン押してください</p>
+    </div>
+    <div class="show_sub">
+          <div class="show">
+              <%= link_to '編集', edit_tweet_path(@tweet.id), method: :get %>
+          </div>
+          <div class="delete">
+              <%= link_to '削除', tweet_path(@tweet.id), method: :delete %>
+          </div>
+      </div>
+   </div>
       <% end %>
       <p><%= @tweet.text %></p>
      <div class="audio">

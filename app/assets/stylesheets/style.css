@@ -45,6 +45,49 @@ div.contents.row div.content_post {
   border: 2px solid black;
   border-radius: 5px ;
 }
+.show_list{
+  display: flex;
+  justify-content: space-between;
+}
+.name_show {
+  display: flex;
+  justify-content: space-between;
+}
+
+.show_text p {
+  color: red;
+}
+
+.show {
+    padding: 2px 5px;
+    border: 1px solid black;
+    font-size: 8px;
+    display: inline-block;
+    }
+.delete {
+  padding: 2px 5px;
+  border: 1px solid black;
+  font-size: 8px;
+  display: inline-block;
+}
+.delete:hover{
+  border-color: red;
+}
+
+.users_show:hover{
+  border-color: rgb(53, 208, 255);
+   }
+.show:hover{
+  border-color: rgb(53, 208, 255);
+   }
+.users_show {
+position:relative;
+left: 650px;
+padding: 2px 5px;
+border: 1px solid black;
+font-size: 8px;
+display: inline-block;
+}
 
 .user__info li {
 margin-top: 25px;
@@ -285,4 +328,14 @@ margin: 10px;
  border-radius: 2px;
  color: black;
  margin: 3px 0;
+}
+.content_new p {
+  color: red;
+}
+
+.container{
+margin: 0 25%;
+}
+.container h2{
+margin-bottom: 50px;
 }

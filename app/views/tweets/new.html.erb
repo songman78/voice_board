@@ -1,5 +1,5 @@
 <div class="contents row">
-  <div class="container">
+  <div class="container_tweets">
     <h3>投稿する</h3>
       
     <%= form_with(model: @tweet, local: true) do |form| %>
@@ -20,12 +20,15 @@
       </section>
     </div>
 
+    <div class="content_new">
 <%= javascript_pack_tag 'app.js' %>
+      <p>※音声ファイルを選択してください</p>
       <%= form.file_field :file , :size => 140 %>
       <%= form.text_area :text, placeholder: "ジャンル・時代・場所など", rows: "10" %>
       <%= form.submit "投稿する" %>
        <%= form.collection_select(:check_id, Check.all, :id, :name, {}, {class:"check"}) %>
        <p>※問題が解決しましたら、編集ボタンから「解決済」を選択してください</p>
+       </div>
     <% end %>
   </div>
 </div>

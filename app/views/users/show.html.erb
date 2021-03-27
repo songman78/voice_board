@@ -1,8 +1,14 @@
 <div class="contents row">
+<div class="user_content">
   <p><%= @name %>さんの投稿一覧</p>
+<%unless @tweets.present? %>
+<p>投稿はありません</p>
+<%end%>
   <% @tweets.each do |tweet| %>
    <div class="content_post" >
-     <%= link_to '詳細', tweet_path(tweet.id), method: :get %>
+   <div class="users_show">
+     <%= link_to '詳細ページ', tweet_path(tweet.id), method: :get %>
+    </div>
       <p><%= tweet.text %></p>
        <div class="audio">
      <audio src= "<%= "#{tweet.file}" %>" controls="">
@@ -11,4 +17,5 @@
      </div>
     </div>
   <% end %>
+</div>
 </div>
