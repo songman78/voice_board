@@ -35,6 +35,7 @@ h1.grid-6 a {
   text-decoration:none;
 }
 div.contents.row div.content_post {
+  margin: 2px 0;
   padding: 10px 10px 5px 10px;
   position: relative;
   height: 100%;

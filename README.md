@@ -30,12 +30,16 @@
 <h3>音声再生機能</h3>
 <p>・ユーザーはトップページ、また投稿の詳細ページにて音声ファイルを再生することができます。</p>
 
+<a href="https://gyazo.com/dc218b08310fd8f88524c481872f3235"><img src="https://i.gyazo.com/dc218b08310fd8f88524c481872f3235.gif" alt="Image from Gyazo" width="1000"/></a>
+
 <h3> コメント機能<h3>
 <p>・気になった投稿があれば詳細ページに遷移し、コメントする形で回答することができます。</p>
+<a href="https://gyazo.com/a00b65d3d7b6176843dc7864c4336eec"><img src="https://i.gyazo.com/a00b65d3d7b6176843dc7864c4336eec.gif" alt="Image from Gyazo" width="1000"/></a>
 
 <h3>カテゴリー分け機能</h3>
 <p>・新着投稿には新規投稿した中から数を限定して表示している。</p>
 <p>・解決済みの投稿、未解決の投稿はタグで管理しており、もし投稿者が望みの回答が得ることができたら、解決済みのタグに編集。トップページでは解決済みの欄に表示されます。</p>
+<a href="https://gyazo.com/d71caed365ab5144a5cf8c0f9d97bcd3"><img src="https://i.gyazo.com/d71caed365ab5144a5cf8c0f9d97bcd3.gif" alt="Image from Gyazo" width="1000"/></a>
 
 
 
@@ -63,10 +67,6 @@
 ## エディタ
 <p>VScode</p>
  
-
-# 課題や今後実装したい機能
-<h3>カテゴリー分け機能の追加</h3>
-<p>・今はまだ考えていませんが、今後投稿数が増えたとしたら、より細かいカテゴリーに分けることでアプリケーションの利便性が上がると思います。</p>
 
 # DB設計
 

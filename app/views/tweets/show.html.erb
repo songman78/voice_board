@@ -1,4 +1,9 @@
 <div class="contents row">
+     <div class="name">
+      <a href= "/users/<%= (@tweet.user.id) %>">
+          <span>投稿者</span><%= @tweet.user.name %>
+        </a>
+     </div>
   <div class="content_post" >
    <% if user_signed_in? && current_user.id == @tweet.user_id %>
   <div class="show_list">
