@@ -13,7 +13,8 @@
 
 # App URL
 <p>safariでは再生機能の対応はされていません</p>
-  ### **https://voice-board.herokuapp.com/**  
+
+### **https://voice-board.herokuapp.com/**  
 
 
 # 制作背景(意図)
