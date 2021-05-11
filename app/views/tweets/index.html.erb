@@ -18,7 +18,7 @@
     <% @tweets.each do |tweet| %>
       <% if tweet.check_id == 1 %>
         <%= render partial: "tweet", locals: { tweet: tweet} %>
-      <%end%>
+      <% end %>
     <% end %>
   </div>
   <div class="solution_content">
